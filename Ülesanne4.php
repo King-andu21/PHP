@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Täisarv 1 <input type="number" name="var1"><br>
+        Täisarv 2 <input type="number" name="var2"><br>
+        <br>
+        Kasutaja1 Vanus <input type="number" name="kasutaja1_vanus"><br>
+        Kasutaja2 Vanus <input type="number" name="kasutaja2_vanus"><br>
+        <input type="submit" value=saada>
+    </form>
+    <?php
+    /*
+    04 - PHP - Tingimusalused
+    Andre Pook
+    Haapsalu Kutsehariduskeskus
+    04.05.2026
+    */
+    $var1 = $_GET["var1"];
+    $var2 = $_GET["var2"];
+    $kasutaja1_vanus = $_GET["kasutaja1_vanus"];
+    $kasutaja2_vanus = $_GET["kasutaja2_vanus"];
+    switch(true) {
+        case !$var1:
+            echo "var1 missing! <br>";
+            break;
+        case !$var2: 
+            echo "var2 missing! <br>";
+            break;
+        default:
+            echo $var1." / ".$var2 ." = ". $var1/$var2."<br>";
+    }
+    if($kasutaja1_vanus=$kasutaja2_vanus) {
+        echo "Kasutaja1 ja Kasutaja2 on ühevanused <br>";
+        }
+        elseif($kasutaja1_vanus<$kasutaja2_vanus) {
+            echo "Kasutaja2 on vanem kui Kasutaja1 <br>";
+
+        }
+    elseif($kasutaja2_vanus<$kasutaja1_vanus) {
+        echo "Kasutaja1 on vanem kui Kasutaja2 <br>";
+    }
+    else {
+        echo "Vanused puuduvad <br>";
+    }
+    ?>
+</body>
+</html>
