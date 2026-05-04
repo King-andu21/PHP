@@ -8,17 +8,12 @@
 <body>
     <?php
     /*
-    01 - PHP - Muutujad
+    02 - PHP - Matemaatilised tehted
     Andre Pook
     Haapsalu Kutsehariduskeskus
     04.05.2026
     */
-    $test_var = "\"It's My Life\" - Dr.Alban";
-    echo $test_var."<br>";
-
-    echo "(\(\\"."<br>";
-    echo "( -.-)"."<br>";
-    echo "o_(\")(\")"."<br>";
+    $test_var = 1;
     ?>
 </body>
 </html>
