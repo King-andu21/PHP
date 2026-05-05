@@ -155,14 +155,12 @@
         }
     }
     if($found==true){
-        echo"<div class=\"alert alert-primary\" role=\"alert\">
-        '$otistav' on massiivis olemas!
-        </div>";
+        printf("<div class=\"alert alert-primary\" role=\"alert\">
+        '%s' on massiivis olemas! </div>",$otsitav);
     }
     else{
-        echo"<div class=\"alert alert-primary\" role=\"alert\">
-        '$otistav' pole massiivis olemas!
-        </div>";
+        printf("<div class=\"alert alert-primary\" role=\"alert\">
+        '%s' pole massiivis olemas! </div>",$otsitav);
     }
 
     ?>
