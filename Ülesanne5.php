@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <?php
@@ -110,6 +111,62 @@
         foreach($firmad as $firma){
             echo"$firma <br>";
         }
+        echo"<hr>";
+        $riigid = array("Indonesia","Canada","Kyrgyzstan","Germany","Philippines",
+        "Philippines","Canada","Philippines","South Sudan","Brazil",
+        "Democratic Republic of the Congo","Indonesia","Syria","Sweden",
+        "Philippines","Russia","China","Japan","Brazil","Sweden","Mexico","France",
+        "Kazakhstan","Cuba","Portugal","Czech Republic");
+
+        usort($riigid,'sortByLength');
+        echo $riigid[0]."<br> <hr>";
+
+        $hiina_nimed = array("瀚聪","月松","雨萌","展博","雪丽","哲恒","慧妍","博裕","宸瑜","奕漳",
+        "思宏","伟菘","彦歆","睿杰","尹智","琪煜","惠茜","晓晴","志宸","博豪",
+        "璟雯","崇杉","俊誉","军卿","辰华","娅楠","志宸","欣妍","明美");
+
+        usort($hiina_nimed,'sortByLength');
+        $counted_hiina_nimed = count($hiina_nimed);
+        echo $hiina_nimed[0]."<br>";
+        echo $hiina_nimed[count($hiina_nimed)-1]."<br>";
+
+        $google = array("Feake","Bradwell","Dreger","Bloggett","Lambole","Daish","Lippiett",
+        "Blackie","Stollenbeck","Houseago","Dugall","Sprowson","Kitley","Mcenamin",
+        "Allchin","Doghartie","Brierly","Pirrone","Fairnie","Seal","Scoffins",
+        "Galer","Matevosian","DeBlase","Cubbin","Izzett","Ebi","Clohisey",
+        "Prater","Probart","Samwaye","Concannon","MacLure","Eliet","Kundt","Reyes")
+
+
     ?>
+    <form action="">
+        Otsi "Googlist" <input type="text" name="otsitav"><br>
+        <input type="submit" value=saada>
+    </form>
+    <?php
+    
+        $otsitav = $_GET["otsitav"];
+    foreach($google as $goog){
+        if(str_contains("$goog","$otsitav")){
+            $found=true;
+            break;
+        }
+        else{
+            $found=false;
+        }
+    }
+    if($found==true){
+        echo"<div class=\"alert alert-primary\" role=\"alert\">
+        '$otistav' on massiivis olemas!
+        </div>";
+    }
+    else{
+        echo"<div class=\"alert alert-primary\" role=\"alert\">
+        '$otistav' pole massiivis olemas!
+        </div>";
+    }
+
+    ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
