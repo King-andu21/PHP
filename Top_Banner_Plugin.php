@@ -1,10 +1,5 @@
 <?php
-/**
- * Plugin Name: Custom Top Message Bar
- * Description: Displays a customizable message at the top of every post.
- * Version: 1.0
- * Author: Your Name
- */
+
 
 // Exit if accessed directly
 if (!defined('ABSPATH')) exit;
@@ -72,13 +67,11 @@ function ctmb_settings_page() {
  */
 add_action('wp_body_open', 'ctmb_display_message');
 function ctmb_display_message() {
-    // Only show on single posts
     if (is_single()) {
         $text = get_option('ctmb_text', 'Welcome to our site!');
         $bg = get_option('ctmb_bg_color', '#ff0000');
         $color = get_option('ctmb_text_color', '#ffffff');
 
-        // We use 'echo' here because wp_body_open is an action, not a filter
         echo "
             <div class='ctmb-message-bar' style='
                 background-color: {$bg};
