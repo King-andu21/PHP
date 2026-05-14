@@ -1,4 +1,11 @@
 <?php
+/**
+ * Plugin Name: Custom Top Message Bar
+ * Description: Displays a customizable message at the top of every post.
+ * Version: 1.0
+ * Author: Andre
+ */
+
 // Exit if accessed directly
 if (!defined('ABSPATH')) exit;
 
