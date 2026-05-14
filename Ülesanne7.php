@@ -30,11 +30,11 @@
 
     ?>
     <form action="">
-        Kasutajanimi <input type="text" name="var2"><br>
+        Kasutajanimi <input type="text" name="test"><br>
         <input type="submit" value=saada>
     </form>
     <?php
-    $var2 = $_GET["var2"];
+    $var2 = $_GET["test"];
     echo $var2;
     function kasutajanimi_email($nimi){
     $lowercase_name = strtolower($nimi);
@@ -42,7 +42,7 @@
     $lowercase_name_email = $lowercase_name."@hkhk.edu.ee";
     echo $lowercase_name_email;
     }
-    kasutajanimi_email("$var2")
+    kasutajanimi_email("$var2");
 
     ?>
 </body>
