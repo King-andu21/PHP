@@ -161,10 +161,27 @@
     else{
         printf("<div class=\"alert alert-primary\" role=\"alert\">
         '%s' pole massiivis olemas! </div>",$otsitav);
-    }
+    }    
 
     ?>
-
+    <?php
+    
+        $pildid = array("prentice.jpg","freeland.jpg","peterus.jpg","devlin.jpg","gabriel.jpg","pete.jpg");
+        printf('<img src="Img\%s" alt=""> <br>', $pildid[2]);
+        $value = 0;
+        echo'<div class="container text-center">
+  <div class="row align-items-start">';
+        foreach($pildid as $pilt){
+            printf('<div class="col"><img src="Img\%s" alt=""  style="width:150px;height:150px;"></div>', $pildid[$value]);
+            $value++;
+        }
+        echo '  </div>
+</div>';
+    
+    
+    
+    ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>
