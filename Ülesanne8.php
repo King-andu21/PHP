@@ -29,8 +29,7 @@
 
     $kooliaasta_lopp = strtotime('21.06.26 00:00');
     $praegu = strtotime(date('d.m.y G:i', time())); 
-    $test = $kooliaasta_lopp;
-    $test = $praegu;
+    $test = $kooliaasta_lopp-$praegu;
     echo $test.'<br>';
 
     ?>
