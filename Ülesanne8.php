@@ -32,6 +32,24 @@
     $test = $kooliaasta_lopp-$praegu;
     echo $test.'<br>';
 
+    $currentMonth=DATE("m");
+ 
+    if ($currentMonth>="03" && $currentMonth<="05") {
+        $season = "kevad";
+    }
+    elseif ($currentMonth>="06" && $currentMonth<="08") {
+        $season = "suvi";
+    }
+    elseif ($currentMonth>="09" && $currentMonth<="11"){
+        $season = "sügis";
+    }
+    else {
+        $season = "talv";
+    }
+    # overwrite (kevad,suvi,sügis,talv)
+    # $season = "";
+    printf('<div class="col"><img src="Img\%s.jpg" alt=""  style="width:150px;height:150px;"></div>', $season);
+    echo "month: ".$season;
     ?>
 </body>
 </html>
